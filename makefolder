@@ -1,0 +1,14 @@
+#!/bin/bash
+# author: wangjianan
+# url: www.oopmind.com
+
+if [ ! -n "$1" ] ;then
+	echo "请输入文件夹名称"
+	exit 1
+else
+	MYDATE=`date +%y-%m-%d`
+	dirurl="/home/wangjianan/文档/$MYDATE.$1"
+	echo "$dirurl"
+	mkdir -p $dirurl
+	nautilus $dirurl
+fi
